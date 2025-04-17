@@ -5,7 +5,7 @@ const table = document.getElementById("dataTable");
 const rows = table.getElementsByTagName("tbody")[0].getElementsByTagName("tr");
 const loadingText = document.getElementById("loading");
 
-// Sor kiválasztása kattintással
+
 Array.from(rows).forEach((row, index) => {
   row.addEventListener("click", () => {
     selectedRowIndex = index;
@@ -30,7 +30,6 @@ function plotSelectedRow() {
     const ctx = document.getElementById("chartCanvas").getContext("2d");
 
     if (myChart === null) {
-      // első betöltés
       myChart = new Chart(ctx, {
         type: "line",
         data: {
@@ -63,7 +62,6 @@ function plotSelectedRow() {
         }
       });
     } else {
-      // csak adatok frissítése – és animáltan update
       myChart.data.datasets[0].data = values;
       myChart.data.datasets[0].label = `Sor #${selectedRowIndex + 1}`;
       myChart.update();
