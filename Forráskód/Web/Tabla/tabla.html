@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>Táblázat</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="tabla.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Kezdőlap</a></li>
+      <li><a href="#" class="active">Táblázat</a></li>
+      <li><a href="../html5/html5.html">HTML5</a></li>
+      <li><a href="../Chart/chartjs.html">ChartJS</a></li>
+      <li><a href="../Ajax/ajax.html">AJAX</a></li>
+      <li><a href="../oo/oojs.html">OOJS</a></li>
+      <li><a href="../react.html">React</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h2>Felhasználók</h2>
+
+    <form id="userForm" style="margin-bottom: 20px; display: flex; flex-wrap: wrap; gap: 12px; justify-content: center;">
+      <input type="text" id="name" placeholder="Név" required minlength="3" maxlength="20">
+      <input type="number" id="age" placeholder="Kor" required min="0" max="120">
+      <input type="text" id="city" placeholder="Város" required minlength="3" maxlength="30">
+      <button type="submit">Hozzáadás</button>
+    </form>
+
+    <input type="text" id="search" placeholder="Keresés..." style="padding: 10px; font-size: 15px; width: 100%; max-width: 400px; margin: 0 auto 20px; display: block; border: 1px solid #ccc; border-radius: 6px;">
+
+    <table id="userTable">
+      <thead>
+        <tr>
+          <th onclick="sortTable(0)">Név</th>
+          <th onclick="sortTable(1)">Kor</th>
+          <th onclick="sortTable(2)">Város</th>
+          <th>Művelet</th>
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+  </div>
+
+  <footer>
+    <p>Készítette: Vig Zoltán Tamás (PVJN8G), Mulati Bence (XNG2BE)</p>
+  </footer>
+</body>
+</html>
