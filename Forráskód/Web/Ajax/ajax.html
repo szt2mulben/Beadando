@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>AJAX feladat</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="ajax.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Kezdőlap</a></li>
+      <li><a href="../Tabla/tabla.html">Táblázat</a></li>
+      <li><a href="../html5/html5.html">HTML5</a></li>
+      <li><a href="../Chart/chartjs.html">ChartJS</a></li>
+      <li><a href="#" class="active">AJAX</a></li>
+      <li><a href="../oo/oojs.html">OOJS</a></li>
+      <li><a href="../react.html">React</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h2>AJAX – API alapú adatkezelés</h2>
+
+    <section style="margin-bottom: 30px;">
+      <h3>Új rekord hozzáadása</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px;">
+        <input type="text" id="name" placeholder="Név (max 30 karakter)">
+        <input type="number" id="height" placeholder="Magasság">
+        <input type="number" id="weight" placeholder="Súly">
+        <button onclick="createRecord()">Hozzáadás</button>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 30px;">
+      <h3>Adatok lekérdezése</h3>
+      <button onclick="loadData()">Adatok frissítése</button>
+      <div id="dataList" style="margin-top: 15px;"></div>
+      <div id="stats" style="margin-top: 10px; color: #6c757d;"></div>
+    </section>
+
+    <section style="margin-bottom: 30px;">
+      <h3>Rekord módosítása</h3>
+      <div style="display: flex; flex-wrap: wrap; gap: 10px;">
+        <input type="number" id="updateId" placeholder="ID">
+        <button onclick="getDataForId()">Adatok betöltése</button>
+      </div>
+      <div style="display: flex; flex-wrap: wrap; gap: 12px; margin-top: 10px;">
+        <input type="text" id="updateName" placeholder="Név">
+        <input type="number" id="updateHeight" placeholder="Magasság">
+        <input type="number" id="updateWeight" placeholder="Súly">
+        <button onclick="updateRecord()">Módosítás</button>
+      </div>
+    </section>
+
+    <section style="margin-bottom: 20px;">
+      <h3>Rekord törlése</h3>
+      <div style="display: flex; gap: 12px;">
+        <input type="number" id="deleteId" placeholder="ID">
+        <button onclick="deleteRecord()">Törlés</button>
+      </div>
+    </section>
+
+    <p id="feedback" style="margin-top: 20px; font-style: italic; color: #495057;"></p>
+  </div>
+
+  <footer>
+    <p>Készítette: Vig Zoltán Tamás (PVJN8G), Mulati Bence (XNG2BE)</p>
+  </footer>
+</body>
+</html>
