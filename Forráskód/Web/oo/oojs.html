@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <title>OOJS példa</title>
+  <link rel="stylesheet" href="../style.css">
+  <script defer src="oojs.js"></script>
+  <style>
+    .animal-card {
+      background-color: #fff;
+      border: 1px solid #dee2e6;
+      border-radius: 10px;
+      padding: 15px;
+      margin: 10px;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      width: 180px;
+    }
+
+    .animal-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .animal-emoji {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .speak-message {
+      margin-top: 5px;
+      font-style: italic;
+      color: #2e7d32;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Kezdőlap</a></li>
+      <li><a href="../Tabla/tabla.html">Táblázat</a></li>
+      <li><a href="../html5/html5.html">HTML5</a></li>
+      <li><a href="../Chart/chartjs.html">ChartJS</a></li>
+      <li><a href="../Ajax/ajax.html">AJAX</a></li>
+      <li><a href="#" class="active">OOJS</a></li>
+      <li><a href="../react.html">React</a></li>
+    </ul>
+  </nav>
+
+  <div id="content">
+    <h2>Objektumorientált JavaScript - Állatkerti app</h2>
+    <button onclick="createAnimals()">Állatok megjelenítése</button>
+    <div id="zoo" class="animal-container"></div>
+  </div>
+
+  <footer>
+    <p>Készítette: Vig Zoltán Tamás (PVJN8G), Mulati Bence (XNG2BE)</p>
+  </footer>
+</body>
+</html>
