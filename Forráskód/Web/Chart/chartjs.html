@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <title>ChartJS</title>
+    <link rel="stylesheet" href="chartjs.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="chartjs.js"></script>
+</head>
+      
+<body>
+  <header>
+    <h1>Web-programozás-1 Előadás Házi feladat</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="../index.html">Kezdőlap</a></li>
+      <li><a href="../Tabla/tabla.html">Táblázat</a></li>
+      <li><a href="../html5/html5.html">HTML5</a></li>
+      <li><a href="#" class="active">ChartJS</a></li>
+      <li><a href="../Ajax/ajax.html">AJAX</a></li>
+      <li><a href="../oo/oojs.html">OOJS</a></li>
+      <li><a href="../react.html">React</a></li>
+    </ul>
+  </nav>
+
+  <aside>
+    <p>Chart.js vonaldiagram példa</p>
+  </aside>
+
+  <div id="content">
+    <h2>Adattáblázat</h2>
+
+    <table id="dataTable">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>A</th>
+          <th>B</th>
+          <th>C</th>
+          <th>D</th>
+          <th>E</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>1</td><td>10</td><td>100</td><td>20</td><td>150</td><td>5</td></tr>
+        <tr><td>2</td><td>80</td><td>5</td><td>95</td><td>10</td><td>200</td></tr>
+        <tr><td>3</td><td>60</td><td>120</td><td>30</td><td>90</td><td>50</td></tr>
+        <tr><td>4</td><td>5</td><td>75</td><td>10</td><td>100</td><td>125</td></tr>
+        <tr><td>5</td><td>200</td><td>20</td><td>150</td><td>10</td><td>60</td></tr>
+      </tbody>
+    </table>
+
+    <button onclick="plotSelectedRow()">Kijelölt sor kirajzolása</button>
+    <p id="loading">Diagram frissítése...</p>
+
+    <div id="panel">
+      <canvas id="chartCanvas" width="400" height="200"></canvas>
+    </div>
+  </div>
+
+  <footer>
+    <p>Készítette: Vig Zoltán Tamás (PVJN8G), Mulati Bence (XNG2BE)</p>
+  </footer>
+</body>
+</html>
